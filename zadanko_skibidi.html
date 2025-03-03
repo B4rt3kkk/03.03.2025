@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+    <body>
+        <main>
+
+            <div class="lewo">
+
+                <div class="gora">
+                    <button id="kalkulator">Kalkulator Spalania</button>
+                </div>
+
+                <div class="dol">
+                    <button id="chat">Chat</button>
+                </div>
+
+            </div>
+
+            <div class="prawo">
+
+            </div>
+
+            <script>
+
+                const kalkulatorButton = document.getElementById('kalkulator');
+                const chatButton = document.getElementById('chat');
+                const prawo = document.querySelector('.prawo');
+
+                function pokazZawartosc(tresc) {
+                    prawo.innerHTML = tresc;
+                }
+
+                kalkulatorButton.addEventListener('click', function() {
+                    const kalkulatorContent = `
+                        <h2>Wprowadź dane, aby obliczyć spalanie:</h2>`;
+                    pokazZawartosc(kalkulatorContent);
+                });
+
+                chatButton.addEventListener('click', function() {
+                    const chatContent = `
+                        <h2>Witamy w chatcie! Napisz wiadomość...</h2>`;
+                    pokazZawartosc(chatContent);
+                });
+
+            </script>
+
+        </main>
+    </body>
+</html>
