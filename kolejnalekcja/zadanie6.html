@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 23%;
+        }
+        #wynik {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <form id="myForm">
+            <input type="text" name="imie" id="imie" placeholder="Imię">
+            <input type="text" name="nazwisko" id="nazwisko" placeholder="Nazwisko">
+            <button type="submit">Wyślij</button>
+        </form>
+    </main>
+
+    <div id="wynik"></div>
+
+    <script>
+        const formularz = document.getElementById("myForm");
+
+        formularz.addEventListener("submit", function(e) {
+            e.preventDefault(); 
+            
+            let wynik = document.getElementById("wynik");
+            let data = new FormData(e.target);
+            
+            wynik.innerHTML = `<p>Formularz wysłany z wartościami:</p><br/>`;
+            
+            data.forEach((value, key) => {
+                wynik.innerHTML += `${key}: ${value}<br/>`;
+            });
+
+            setTimeout(() => {
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

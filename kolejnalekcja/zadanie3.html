@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            margin-top: 23%;
+        }
+        button{
+        width: 200px;
+        height: 40px;
+        background-color: gainsboro;
+        border: solid 1px black;
+        border-radius: 5px;
+        }
+    </style>
+</head>
+    <body>
+
+        <main>
+
+            <button>Sigma Przycisk</button>
+
+        </main>
+
+        <script>
+
+            document.addEventListener("mousemove", function(e){
+                console.log("Ruch myszy", e.clientX, e.clientY);
+
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            display: flex;
+            justify-content: center;
+            margin-top: 23%;
+        }
+        button{
+        width: 200px;
+        height: 40px;
+        background-color: gainsboro;
+        border: solid 1px black;
+        border-radius: 5px;
+        }
+    </style>
+</head>
+    <body>
+
+        <main>
+
+            <select name="zmk">
+                <option value="1">jeden</option>
+                <option value="2">dwa</option>
+                <option value="3">trzy</option>
+
+            </select>
+
+        </main>
+
+        <script>
+
+            function name1(){
+                alert("Skibidi Sigma Male Solo Wolf")
+            }
+            function name2(){
+                alert("Hello hello this is me")
+            }
+            function name3(){
+                alert("Kupa")
+            }
+
+            document.querySelector("select").addEventListener("change", function(e){
+                let changeValue = (e.target.value);
+                switch (changeValue){
+                    case "1":
+                        console.log("Jyden");
+                        name1();
+                        break;
+
+                    case "2":
+                        console.log("Dwaj");
+                        name2();
+                        break;
+
+                    case "3":
+                        console.log("Try");
+                        name3();
+                        break;
+
+                    default:
+                        console.log("Nic Skibidi")
+                }
+            });
+
+        </script>
+    </body>
+</html>
